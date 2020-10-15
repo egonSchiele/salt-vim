@@ -1,7 +1,7 @@
-" Language:    MoonScript
-" Maintainer:  leafo <leafot@gmail.com>
-" Based On:    CoffeeScript by Mick Koch <kchmck@gmail.com>
-" URL:         http://github.com/leafo/moonscript-vim
+" Language:    Salty
+" Maintainer:  Adit <bluemangroupie@gmail.com>
+" Based On:    MoonScript by leafo <leafot@gmail.com>
+" URL:         http://github.com/adit/salty-vim
 " License:     WTFPL
 
 if exists("b:did_indent")

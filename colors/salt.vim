@@ -1,8 +1,8 @@
 " Moon Colorscheme for GUI
 
 let s:foreground  = "FFFFFF"
-let s:background = "2B2B2B"
-let s:background_light  = "3C3C3C"
+let s:background = "111111"
+let s:background_light  = "121212"
 
 let s:builtin  = "F69385"
 let s:string   = "F1BF8E"
@@ -18,7 +18,7 @@ set background=dark
 hi clear
 syntax reset
 
-let g:colors_name = "moon"
+let g:colors_name = "salt"
 
 if has("gui_running")
 	fun <SID>X(group, fg, bg, attr)
