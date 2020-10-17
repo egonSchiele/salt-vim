@@ -1,6 +1,6 @@
 " Language:    Salty
 " Maintainer:  Adit <bluemangroupie@gmail.com>
-" Based On:    MoonScript by leafo <leafot@gmail.com>
+" Based On:    saltScript by leafo <leafot@gmail.com>
 " URL:         http://github.com/adit/salty-vim
 " License:     WTFPL
 
@@ -11,13 +11,13 @@ endif
 let b:did_indent = 1
 
 setlocal autoindent
-setlocal indentexpr=GetMoonIndent(v:lnum)
-" Make sure GetMoonIndent is run when these are typed so they can be
+setlocal indentexpr=GetsaltIndent(v:lnum)
+" Make sure GetsaltIndent is run when these are typed so they can be
 " indented or outdented.
 setlocal indentkeys+=0],0),0.,=else,=elseif
 
 " Only define the function once.
-if exists("*GetMoonIndent")
+if exists("*GetsaltIndent")
   finish
 endif
 
@@ -57,11 +57,11 @@ let s:SINGLE_LINE_ELSE = '^else\s\+\%(\<\%(if\)\>\)\@!'
 let s:MAX_LOOKBACK = 50
 
 " Syntax names for strings
-let s:SYNTAX_STRING = 'moon\%(String\|AssignString\|Embed\|Regex\|Heregex\|'
+let s:SYNTAX_STRING = 'salt\%(String\|AssignString\|Embed\|Regex\|Heregex\|'
 \                   . 'Heredoc\)'
 
 " Syntax names for comments
-let s:SYNTAX_COMMENT = 'moon\%(Comment\|BlockComment\|HeregexComment\)'
+let s:SYNTAX_COMMENT = 'salt\%(Comment\|BlockComment\|HeregexComment\)'
 
 " Syntax names for strings and comments
 let s:SYNTAX_STRING_COMMENT = s:SYNTAX_STRING . '\|' . s:SYNTAX_COMMENT
@@ -233,7 +233,7 @@ function! s:GetTrimmedLine(linenum)
   \                                  '\s\+$', '', '')
 endfunction
 
-function! s:GetMoonIndent(curlinenum)
+function! s:GetsaltIndent(curlinenum)
   let prevlinenum = s:GetPrevNormalLine(a:curlinenum)
 
   " Don't do anything if there's no previous line.
@@ -313,10 +313,10 @@ function! s:GetMoonIndent(curlinenum)
   return -1
 endfunction
 
-" Wrap s:GetMoonIndent to keep the cursor position.
-function! GetMoonIndent(curlinenum)
+" Wrap s:GetsaltIndent to keep the cursor position.
+function! GetsaltIndent(curlinenum)
   let oldcursor = getpos('.')
-  let indent = s:GetMoonIndent(a:curlinenum)
+  let indent = s:GetsaltIndent(a:curlinenum)
   call setpos('.', oldcursor)
 
   return indent
