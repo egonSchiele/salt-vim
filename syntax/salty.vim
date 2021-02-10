@@ -11,8 +11,10 @@ endif
 
 syn keyword basicLanguageKeywords guard if then else class where otherwise return new join split in keyin uniq pop keys values reverse count size shuffle sub
 syn keyword basicLanguageKeywords map each any all select
-syn keyword basicTypes string int array bool
+syn keyword basicLanguageKeywords use throw require require_once include include_once const public private protected static namespace echo print extends implements
+syn keyword basicTypes string int array bool float null object
 syn keyword saltyBool true false
+syn keyword saltyMagicConstant __LINE__ __FILE__ __DIR__ __FUNCTION__ __CLASS__ __TRAIT__ __METHOD__ __NAMESPACE__
 syn match saltyNumber "\<[0-9]\+\>\|\<0[xX][0-9a-fA-F]\+\>\|\<0[oO][0-7]\+\>\|\<0[bB][10]\+\>"
 syn match saltyFloat "\<[0-9]\+\.[0-9]\+\([eE][-+]\=[0-9]\+\)\=\>"
 syn match saltySeparator  "[,;]"
@@ -30,6 +32,7 @@ syn match saltyComment "# .*$"
 syn match phpComment "// .*$"
 syn region saltyString start=+"+ skip=+\\\\\|\\"+ end=+"+
 syn region saltyString start=+'+ skip=+\\\\\|\\"+ end=+'+
+syn region saltyBackticks start="`" end="`" skip="\\\\\|\\`"
 
 let b:current_syntax = "salty"
 
@@ -38,7 +41,8 @@ hi def link functionName Function
 hi def link functionTypeSignature Function
 hi def link saltyComment Comment
 hi def link phpComment Comment
-hi def link saltyString Constant
+hi def link saltyString String
+hi def link saltyBackticks String
 hi def link saltyNumber Constant
 hi def link saltyFloat Constant
 hi def link operators PreProc
@@ -50,6 +54,7 @@ hi def link saltyInstanceVariable Identifier
 hi def link saltyClassVariable Identifier
 hi def link saltyDotNotation Identifier
 hi def link saltyBool Boolean
+hi def link saltyMagicConstant Identifier
 
 
 endif
