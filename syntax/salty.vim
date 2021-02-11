@@ -11,7 +11,7 @@ endif
 
 syn keyword basicLanguageKeywords guard if then else class where otherwise return new join split in keyin uniq pop keys values reverse count size shuffle sub and self
 syn keyword basicLanguageKeywords map each any all select
-syn keyword basicLanguageKeywords use throw require require_once include include_once const public private protected static namespace echo print extends implements
+syn keyword basicLanguageKeywords use throw require require_once include include_once const public private protected static namespace echo print extends implements as
 syn keyword basicTypes string int array bool float null object
 syn keyword saltyBool true false
 syn keyword saltyMagicConstant __LINE__ __FILE__ __DIR__ __FUNCTION__ __CLASS__ __TRAIT__ __METHOD__ __NAMESPACE__
