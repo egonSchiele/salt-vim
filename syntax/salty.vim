@@ -12,10 +12,11 @@ endif
 syn keyword basicLanguageKeywords guard if then else class where otherwise return new join split in keyin uniq pop keys values reverse count size shuffle sub and self
 syn keyword basicLanguageKeywords map each any all select var_dump $$ do end import let var
 syn keyword basicLanguageKeywords use throw require require_once include include_once const public private protected static namespace echo print extends implements as from
-syn keyword javascriptKeywords super document
+syn keyword javascriptKeywords super document export default
 syn keyword htmlAttributes href src onClick id style class
 syn keyword javascriptFunctions preventDefault length Object getElementById
-syn keyword reactKeywords render props createStore useState combineReducers
+syn keyword reactKeywords render props useState children
+syn keyword reduxKeywords createStore combineReducers dispatch
 syn keyword basicTypes string int array bool float null object
 syn keyword saltyBool true false
 syn keyword saltyMagicConstant __LINE__ __FILE__ __DIR__ __FUNCTION__ __CLASS__ __TRAIT__ __METHOD__ __NAMESPACE__
@@ -48,6 +49,7 @@ hi def link javascriptFunctions Function
 hi def link htmlAttributes Function
 hi def link functionTypeSignature Function
 hi def link reactKeywords Function
+hi def link reduxKeywords Function
 hi def link saltyComment Comment
 hi def link phpComment Comment
 hi def link saltyString String
