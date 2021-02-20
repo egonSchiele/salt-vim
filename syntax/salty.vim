@@ -15,12 +15,12 @@ syn keyword basicLanguageKeywords use throw require require_once include include
 syn keyword javascriptKeywords super document export default
 syn keyword htmlAttributes href src onClick id style class
 syn keyword javascriptFunctions preventDefault length Object getElementById
-syn keyword reactKeywords render props useState children
+syn keyword reactKeywords render props useState children useEffect
 syn keyword reduxKeywords createStore combineReducers dispatch
 syn keyword basicTypes string int array bool float null object
 syn keyword saltyBool true false
 syn keyword saltyMagicConstant __LINE__ __FILE__ __DIR__ __FUNCTION__ __CLASS__ __TRAIT__ __METHOD__ __NAMESPACE__
-syn keyword htmlKeywords a p div br h1 h2 h3 h4 img span html title body head b blockquote code em pre small strong sub sup input ul ol li
+syn keyword htmlKeywords a p div br h1 h2 h3 h4 h5 h6 img span html title body head b blockquote code em pre small strong sub sup input ul ol li
 syn match saltyNumber "\<[0-9]\+\>\|\<0[xX][0-9a-fA-F]\+\>\|\<0[oO][0-7]\+\>\|\<0[bB][10]\+\>"
 syn match saltyFloat "\<[0-9]\+\.[0-9]\+\([eE][-+]\=[0-9]\+\)\=\>"
 syn match saltySeparator  "[,;]"
